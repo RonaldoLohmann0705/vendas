@@ -8,6 +8,8 @@ class ImportsController < ApplicationController
 
   # GET /imports/1 or /imports/1.json
   def show
+    @import = Import.find(params[:id])
+    @vendas = @import.vendas
   end
 
   # GET /imports/new
@@ -22,10 +24,11 @@ class ImportsController < ApplicationController
   # POST /imports or /imports.json
   def create
     @import = Import.new().import(import_params[:import_file])
+    @vendas = @import.vendas
 
     respond_to do |format|    
         format.html { redirect_to @import, notice: "Arquivo foi importado com sucesso!" }
-        format.json { render :show, status: :created, location: @import }      
+        format.json { render :show, status: :created, location: @import, vendas: @vendas }      
     end
   end
 
