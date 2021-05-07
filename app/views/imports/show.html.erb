@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Total imports:</strong>
+  <%= @import.total_imports %>
+</p>
+
+<p>
+  <strong>Total price:</strong>
+  <%= @import.total_price %>
+</p>
+
+<%= link_to 'Edit', edit_import_path(@import) %> |
+<%= link_to 'Back', imports_path %>

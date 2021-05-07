@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Comprador:</strong>
+  <%= @venda.comprador %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @venda.descricao %>
+</p>
+
+<p>
+  <strong>Preco unitario:</strong>
+  <%= @venda.preco_unitario %>
+</p>
+
+<p>
+  <strong>Quantidade:</strong>
+  <%= @venda.quantidade %>
+</p>
+
+<p>
+  <strong>Endereco:</strong>
+  <%= @venda.endereco %>
+</p>
+
+<p>
+  <strong>Fornecedor:</strong>
+  <%= @venda.fornecedor %>
+</p>
+
+<p>
+  <strong>Import:</strong>
+  <%= @venda.import %>
+</p>
+
+<%= link_to 'Edit', edit_venda_path(@venda) %> |
+<%= link_to 'Back', vendas_path %>
