@@ -17,10 +17,6 @@ class ImportsController < ApplicationController
     @import = Import.new
   end
 
-  # GET /imports/1/edit
-  def edit
-  end
-
   # POST /imports or /imports.json
   def create
     @import = Import.new().import(import_params[:import_file])
@@ -29,28 +25,6 @@ class ImportsController < ApplicationController
     respond_to do |format|    
         format.html { redirect_to @import, notice: "Arquivo foi importado com sucesso!" }
         format.json { render :show, status: :created, location: @import, vendas: @vendas }      
-    end
-  end
-
-  # PATCH/PUT /imports/1 or /imports/1.json
-  def update
-    respond_to do |format|
-      if @import.update(import_params)
-        format.html { redirect_to @import, notice: "Import was successfully updated." }
-        format.json { render :show, status: :ok, location: @import }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @import.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /imports/1 or /imports/1.json
-  def destroy
-    @import.destroy
-    respond_to do |format|
-      format.html { redirect_to imports_url, notice: "Import was successfully destroyed." }
-      format.json { head :no_content }
     end
   end
 

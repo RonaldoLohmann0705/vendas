@@ -1,24 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Installation
 
-Things you may want to cover:
+Clone the project, cd to folder and run:
 
-* Ruby version
+bundle install
+rails db:create
+rails db:migrate
 
-* System dependencies
+* Running
 
-* Configuration
+Run:
 
-* Database creation
+rails s
 
-* Database initialization
+In your browser navigate to http://localhost:3000/imports
 
-* How to run the test suite
+* Testing
 
-* Services (job queues, cache servers, search engines, etc.)
+To do testing rspec gem is used. In the project folder, run rspec to run test specifications.
+Model test are covered in specs/models, Controllers specs are covered in specs/controllers
 
-* Deployment instructions
 
-* ...
+
