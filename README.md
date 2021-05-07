@@ -8,8 +8,11 @@ As a fullstack developer, the creator of this is able to present a much better v
 Clone the project, cd to folder and run:
 
 bundle update
+
 bundle install
+
 rails db:create
+
 rails db:migrate
 
 * Running
